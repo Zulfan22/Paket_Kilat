@@ -81,7 +81,7 @@ img {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
-    margin-top: 40px;
+    margin-top: 100px;
     height: 120px;
     width: 100%;
     text-align: center;
@@ -96,10 +96,15 @@ img {
 }
 
 .navbar {
+    position: fixed; /* Mengunci navbar pada posisi tetap */
+    top: 0; /* Menempatkan navbar di bagian atas halaman */
+    left: 0; /* Menempatkan navbar di kiri halaman */
+    width: 100%; /* Melebarkan navbar sesuai dengan lebar layar */
+    height: 60px; /* Menyesuaikan tinggi navbar */
     background-color: #333;
-    overflow: hidden;
-    max-width: auto;
+    z-index: 999; /* Menetapkan z-index untuk memastikan navbar di atas konten lain */
 }
+
 
 
 .navbar a {
@@ -125,7 +130,7 @@ background-color:#4CAF50;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1080px) {
     .navbar a:not(:first-child) {
         display: none;
     }
@@ -138,3 +143,147 @@ background-color:#4CAF50;
         display: block;
     }
 }
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  
+  .carousel-nav li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-nav li:nth-child(1):before {
+    content: url(/images/Image1.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(2):before {
+    content: url(/images/Image2.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(3):before {
+    content: url(/images/Image3.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(4):before {
+    content: url(/images/image4.jpg);
+  }
+  
+  .carousel-nav li:nth-child(5):before {
+    content: url(/images/image5.webp);
+  }
+  .carousel {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    border-radius: 5%;
+}
+.carousel-item:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+.carousel-item.active:after {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.carousel-controls-previous,
+.carousel-controls-next {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-controls-previous {
+    left: 320px;
+}
+.carousel-controls-next {
+    right: 320px;
+}
+
+.carousel-controls-previous::before{
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    width: 5px;
+    transition: left 0.15s ease-in-out;
+}
+.carousel-controls-previous:hover::before{
+    left:-40px;
+}
+
+.carousel-controls-next::before{
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    right: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 45;
+    transform: rotate(-45deg) translateY(-50%);
+    width: 5px;
+    transition: right 0.15s ease-in-out;
+}
+.carousel-controls-next:hover::before{
+    right:-40px;
+}
+.carousel-nav{
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.carousel-nav li{
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+.carousel-nav li.carousel-item-selected{
+    background: #555;
+}
+
+
+
