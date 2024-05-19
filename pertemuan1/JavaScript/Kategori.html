@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kategori</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/kategori.css">
+</head>
+<body>
+    <header>
+            <ul class="nav-links">
+                <li><a href="Admin.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <selection id="Dashboard">
+            <h1> Selamat Datang</h1>
+        </selection>
+        <section class="kategori">
+            <h2>Kategori</h2>
+            <form id="kategori-form">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat">
+                <label for="metode-pembayaran">Metode Pembayaran:</label>
+                <select id="metode-pembayaran" name="metode-pembayaran">
+                    <option value="cod">COD</option>
+                    <option value="epayment">E-Payment</option>
+                </select>
+                <button type="submit">Simpan</button>
+            </form>
+        </section>
+    </main>
+    <script src="JavaScript/form.js"></script>
+</body>
+</html>
