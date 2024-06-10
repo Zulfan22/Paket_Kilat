@@ -1,0 +1,267 @@
+body {
+    margin-top: 0;
+    background-image: url("/images/background.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index:-1;
+}
+
+.container {
+    display: none;
+  }
+
+  .container.active {
+    display: block;
+    background-color: #333;
+    padding: 3px 5px;
+  }
+  .container.active h2{
+    color: white;
+    padding: 10px 14px;
+}
+.container.active ul a{
+    color: white;
+}
+.container.active ul a:hover{
+    color: skyblue;
+}
+.dashboard {
+    display: flex;
+}
+
+.dashboard.active {
+    display: block;
+}
+
+.container.active {
+    color: white;
+    padding: 10px 14px;
+}
+
+.logo {
+    background-color: black;
+    width: 100%;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo-container img {
+    display: block;
+}
+.copy span{
+    position: center;
+    
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    -webkit-text-stroke-color: #333;
+    -webkit-text-stroke-width: 1px;
+    text-align: center;
+}
+
+img {
+    float: left;
+}
+
+.header-image {
+    background-image: url("/images/pengiriman.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    margin-top: 100px;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.header-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed; /* Mengunci navbar pada posisi tetap */
+    top: 0; /* Menempatkan navbar di bagian atas halaman */
+    left: 0; /* Menempatkan navbar di kiri halaman */
+    width: 100%; /* Melebarkan navbar sesuai dengan lebar layar */
+    height: 60px; /* Menyesuaikan tinggi navbar */
+    background-color: #333;
+    z-index: 1; /* Menetapkan z-index untuk memastikan navbar di atas konten lain */
+}
+
+
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+   text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: 2;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #333;
+    padding: 20px 16px;
+    color: white;
+}
+.navbar a.active:hover {
+background-color:#4CAF50;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .switch:checked ~ .navbar a {
+        display: block;
+    }
+
+    .Menu {
+        display: block;
+    }
+}
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  
+  .carousel-nav li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-nav li:nth-child(1):before {
+    content: url(/images/Image1.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(2):before {
+    content: url(/images/Image2.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(3):before {
+    content: url(/images/Image3.jpeg);
+  }
+  
+  .carousel-nav li:nth-child(4):before {
+    content: url(/images/image4.jpg);
+  }
+  
+  .carousel-nav li:nth-child(5):before {
+    content: url(/images/image5.webp);
+  }
+  .carousel {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    border-radius: 5%;
+}
+.carousel-controls-previous,.carousel-controls-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100000; 
+}
+
+
+.carousel-controls-previous {
+    left: 10px;
+}
+
+.carousel-controls-next {
+    right: 10px;
+}
+.carousel-nav{
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.carousel-nav li{
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+.carousel-nav li.carousel-item-selected{
+    background: #555;
+}
+
+.navbar.floating-menu ul li a{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: block;
+    z-index: 3;
+}
+
+.navbar.floating-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar.floating-menu li {
+    margin-bottom: 10px;
+}
+
+.navbar.floating-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar.floating-menu a:hover {
+    color: #666;
+}
+
+
